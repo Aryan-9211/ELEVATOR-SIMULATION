@@ -1,0 +1,162 @@
+:root {
+    --lift-door: linear-gradient(0deg ,#3a3a3a, #888888);
+    --lift-background: #d2d3a4;
+
+    --border-color: #072227;
+    --background: #fffaec;
+
+    --up-button-color: #aee2b2;
+    --up-button-color-hover: #8ce093;
+    --down-button-color: #9b9b9b;
+    --down-button-color-hover: #6b6b6b;
+}
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    padding: 8px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 4px 6px;
+}
+
+.controller {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-container-main {
+    display: flex;
+    margin: 0 20px;
+}
+
+.btn-text {
+    margin-top: 4px;
+    padding: 8px;
+    font-size: 25;
+}
+
+.add-btn {
+    color: rgb(100, 100, 100);
+    background-color: whitesmoke;
+    border: 2px rgb(100, 100, 100) solid;
+
+    width: 9rem;
+    transition: all 0.1s;
+}
+
+.add-btn:hover {
+    background-color: rgb(100, 100, 100);
+    color: whitesmoke;
+}
+
+.remove-btn {
+    color: rgb(207, 39, 33);
+    background-color: whitesmoke;
+    border: 2px rgb(207, 39, 33) solid;
+
+    width: 9rem;
+    transition: all 0.1s;
+}
+
+.remove-btn:hover {
+    background-color: rgb(207, 39, 33);
+    color: whitesmoke;
+}
+
+.building {
+    position: relative;
+    width: 60vw;
+}
+
+.elevator {
+    position: absolute;
+    left: 120px;
+    bottom: 0px;
+
+    background-color: var(--lift-background);
+
+    height: 5rem;
+    width: 3rem;
+    z-index: 1;
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+.door {
+    width: 50%;
+    height: 100%;
+    background: var(--lift-door);
+    border: 2px solid var(--border-color);
+    z-index: 2;
+    transition: width 2s linear;
+}
+
+.floor {
+    position: relative;
+    border-bottom: 4px solid var(--border-color);
+    height: 10rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.floor .floor-number {
+    position: absolute;
+    right: 0;
+    top: 8rem;
+    margin-right: 4px;
+}
+
+.btn-container {
+    margin-left: 4px;
+}
+
+.up-btn {
+    background-color: var(--up-button-color);
+    width: 4rem;
+}
+
+.up-btn:hover {
+    background-color: var(--up-button-color-hover);
+}
+
+.down-btn {
+    background-color: var(--down-button-color);
+    width: 4rem;
+}
+
+.down-btn:hover {
+    background-color: var(--down-button-color-hover);
+}
+
+.repo-link {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        justify-content: center;
+    }
+    .building {
+        width: 100vw;
+    }
+}
+
